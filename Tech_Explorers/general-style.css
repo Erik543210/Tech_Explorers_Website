@@ -1,0 +1,93 @@
+* {
+    margin: auto;
+    font-family: "Zalando Sans Expanded", sans-serif;
+    color: white;
+    font-weight: 600;
+}
+
+body {
+    background-color: rgb(17, 17, 17);
+    background-image: url("/img/home-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar-container {
+    position: fixed;
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+    width:100%;
+    z-index: 1;
+}
+
+.navbar-container,
+.nav-links * {
+    display: flex;
+    text-decoration: none;
+}
+
+.nav-links {
+    margin-top: 7.5vh;
+    margin-left: 0;
+}
+
+.nav-links ul * {
+    margin-left: 2vh;
+    margin-right: 11vh;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.4s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    cursor: pointer;
+}
+
+.logo {
+    margin-left: 5vh;
+    margin-top: 2.5vh;
+    margin-right: 5vh;
+    width: 14vh;
+}
+
+.logo img {
+    width: 13vh;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+
+footer{
+    background-color: rgb(20, 8, 0);
+    margin-top: 10%;
+    height:20vh;
+    display: flex;
+}
+
+footer p{
+    margin-left: 2%;
+    padding-top:1%;
+    font-size:1.2rem;
+    padding-bottom:1%;
+}
+
+.social-media{
+    margin-left:50%;
+    font-size: 1.9rem;
+}

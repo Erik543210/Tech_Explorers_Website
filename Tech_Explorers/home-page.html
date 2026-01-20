@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Explorers</title>
+    <link rel="stylesheet" href="home-page-style.css">
+    <link rel="stylesheet" href="general-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="/img/logo.png" alt="">
+            </div>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="home-page.html">Home</a></li>
+                    <li><a href="">Program</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="intro-container">
+            <div class="welcome-text">
+                <h1>Welcome to</h1>
+
+                <div class="intro-picture">
+                    <img src="/img/human-robot.png" alt="">
+                </div>
+
+                <h1 class="h1-right">Tech Explorers</h1>
+            </div>
+
+
+            <div class="who-are-we">
+                <div class="text">
+                    <h1>What is Tech Explorers?</h1>
+                    <p style="text-indent: 2em;">Tech Explorers is a nonprofit organization centered around STEM-related
+                        fields such as
+                        engineering and computer science. This organization was founded by students with experience in
+                        these fields and who are aiming to spread their understanding and joy of learning in STEM to
+                        others outside of the standard classroom. Our members are part of the Engineering Academy and
+                        Computer Science Academy at our school, and we hope to make STEM education accessible, fun, and
+                        engaging.</p>
+                    <br>
+                    <p style="text-indent: 2em;">Our mission is to empower students through hands-on education that
+                        builds their curiosity and
+                        confidence in these real-world applications. Tech Explorers provides interactive classes in
+                        coding and electronics to introduce students to the foundations of many of the technologies we
+                        see in the world today. We focus on creating a supportive learning environment, encouraging
+                        students to explore, experience, and experiment as they develop new skills and capabilities.</p>
+                </div>
+
+                <div class="stem-img-container">
+                    <img src="img/stem-img.png" alt="">
+                </div>
+            </div>
+
+            <div class="goals">
+                <div class="goals-text">
+                    <h1>Our Goals</h1>
+                </div>
+                <div class="goals-list">
+                    <div class="goal-1">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <p>To teach others about the importance of technology in our lives</p>
+                    </div>
+                    <div class="goal-2">
+                        <i class="fa-solid fa-child"></i>
+                        <p>To educate the younger generation on how certain technologies work</p>
+                    </div>
+                    <div class="goal-3">
+                        <i class="fa-solid fa-computer"></i>
+                        <p>To offer both online and in-person classes surrounded around STEM topics</p>
+                    </div>
+                    <div class="goal-4">
+                        <i class="fa-regular fa-face-laugh-beam"></i>
+                        <p>To make learning about technology fun and engaging</p>
+                    </div>
+                    <div class="goal-5">
+                        <i class="fa-solid fa-earth-americas"></i>
+                        <p>To share our passion of STEM with the world</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Tech Explorers™ | All Rights Reserved</p>
+        <p class="social-media">
+            <a href="https://www.instagram.com/tech_explorers_bca/"><i class="fa-brands fa-instagram"></i></a>
+            |
+            <a href="https://www.gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            |
+            <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+        </p>
+    </footer>
+
+
+</body>
+
+<script>
+    const intro = document.querySelector('.welcome-text');
+    const whoAre = document.querySelector('.who-are-we');
+    const goals = document.querySelector('.goals');
+
+    function animateSection(element) {
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        const progress = Math.min(
+            Math.max((windowHeight - rect.top) / (windowHeight * 0.6), 0),
+            1
+        );
+
+        element.style.opacity = progress;
+        element.style.transform = `translateY(${(1 - progress) * 40}px)`;
+    }
+
+    function onScroll() {
+        const windowHeight = window.innerHeight;
+
+        /* INTRO */
+        const introRect = intro.getBoundingClientRect();
+        const introProgress = Math.min(
+            Math.max((windowHeight - introRect.bottom) / (windowHeight * 0.6), 0),
+            1
+        );
+
+        intro.style.opacity = 1 - introProgress;
+        intro.style.transform = `translateY(${-introProgress * 40}px)`;
+
+        /* SECTIONS */
+        animateSection(whoAre);
+        animateSection(goals);
+    }
+
+    window.addEventListener('scroll', onScroll);
+
+    /* 🔑 Run once on load */
+    onScroll();
+</script>
+
+
+
+</html>

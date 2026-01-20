@@ -1,0 +1,111 @@
+.intro-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.intro-container * {
+    margin-bottom: 0;
+}
+
+.welcome-text {
+    width: 100%;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 28vh;
+}
+
+.welcome-text h1 {
+    position: relative;
+    left: -100%;
+    /* start off-screen */
+    animation: slideIn 1.3s forwards;
+    /* forwards keeps it at the end */
+}
+
+@keyframes slideIn {
+    to {
+        left: 30vh;
+        /* final position */
+    }
+}
+
+.intro-picture {
+    width: 100%;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.intro-picture img {
+    width: 100%;
+}
+
+.intro-container .h1-right {
+    margin-left: 70vh;
+}
+
+.who-are-we {
+    display: flex;
+    margin-top: 0vh;
+    margin-left: 7vh;
+    margin-right: 7vh;
+    padding: 2vh;
+}
+
+.text h1 {
+    margin-bottom: 4vh;
+}
+
+.text p {
+    line-height: 1.5rem;
+    font-weight: 100;
+}
+
+.text {
+    margin-bottom: 18vh;
+}
+
+.who-are-we,
+.goals {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.welcome-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.goals {
+    text-align: center;
+}
+
+.goals-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4vh;
+    margin-left: 4vh;
+    margin-right: 4vh;
+}
+
+.goals-list * {
+    font-size: 2rem;
+    width: 45vh;
+    line-height: 150%;
+}
+
+.goals-list div {
+    background-color: rgba(161, 96, 96, 0.094);
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.goals-list i {
+    font-size: 2.5rem;
+}
+
+.goal-1,
+.goal-2,
+.goal-3 {
+    margin-bottom: 4vh;
+}
