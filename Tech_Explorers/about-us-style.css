@@ -1,0 +1,28 @@
+h1{
+    display: flex;
+    justify-content: center;
+    padding-top: 17vh;
+    margin-bottom: 5vh;
+}
+
+.flickity-prev-next-button{
+    background-color: rgba(255, 255, 255, 0) !important;
+    transition: background-color 0.7s
+}
+
+.flickity-prev-next-button:hover{
+    background-color: white !important;
+}
+
+.gallery-cell{
+    width: 60vw;
+    background-color: rgba(161, 96, 96, 0.136);
+    border-radius: 40px;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+.gallery-cell *{
+    margin-left: 30%;
+}
