@@ -2,11 +2,11 @@
     overflow: hidden;
     width: 100%;
 }
-
+ 
 .intro-container * {
     margin-bottom: 0;
 }
-
+ 
 .welcome-text {
     width: 100%;
     height: 80vh;
@@ -14,36 +14,33 @@
     background-size: cover;
     padding-top: 28vh;
 }
-
+ 
 .welcome-text h1 {
     position: relative;
     left: -100%;
-    /* start off-screen */
     animation: slideIn 1.3s forwards;
-    /* forwards keeps it at the end */
 }
-
+ 
 @keyframes slideIn {
     to {
         left: 30vh;
-        /* final position */
     }
 }
-
+ 
 .intro-picture {
     width: 100%;
     margin-top: 0;
     overflow: hidden;
 }
-
+ 
 .intro-picture img {
     width: 100%;
 }
-
+ 
 .intro-container .h1-right {
     margin-left: 70vh;
 }
-
+ 
 .who-are-we {
     display: flex;
     margin-top: 0vh;
@@ -51,61 +48,82 @@
     margin-right: 7vh;
     padding: 2vh;
 }
-
+ 
 .text h1 {
     margin-bottom: 4vh;
 }
-
+ 
 .text p {
     line-height: 1.5rem;
     font-weight: 100;
 }
-
+ 
 .text {
     margin-bottom: 18vh;
 }
-
+ 
 .who-are-we,
 .goals {
     opacity: 0;
     transform: translateY(40px);
 }
-
+ 
 .welcome-text {
     opacity: 1;
     transform: translateY(0);
 }
-
+ 
 .goals {
+    padding: 60px 40px 80px;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-
+ 
+.goals-text h1 {
+    margin-bottom: 40px;
+}
+ 
 .goals-list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 4vh;
-    margin-left: 4vh;
-    margin-right: 4vh;
+    justify-content: center;
+    gap: 24px;
 }
-
-.goals-list * {
-    font-size: 2rem;
-    width: 45vh;
-    line-height: 150%;
+ 
+.goals-list > div {
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 36px 28px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transition: background-color 0.25s ease, transform 0.25s ease;
 }
-
-.goals-list div {
-    background-color: rgba(161, 96, 96, 0.094);
-    border-radius: 40px;
-    padding: 20px;
+ 
+.goals-list > div:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-4px);
 }
-
+ 
 .goals-list i {
     font-size: 2.5rem;
 }
-
-.goal-1,
-.goal-2,
-.goal-3 {
-    margin-bottom: 4vh;
+ 
+.goals-list p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
 }
+ 
+/* Scroll Animations */
+.who-are-we,
+.goals {
+    opacity: 0;
+    transform: translateY(40px);
+}
+ 
