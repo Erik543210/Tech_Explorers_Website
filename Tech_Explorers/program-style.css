@@ -1,0 +1,38 @@
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 17vh;
+    margin-bottom: 2vh;
+}
+
+.program-section {
+    margin: 4vh 8% 6vh;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: background-color 0.25s ease;
+}
+
+.program-section:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.program-h1 {
+    justify-content: left;
+    padding-top: 0;
+    margin-bottom: 2vh;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.program-section p {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
